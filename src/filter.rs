@@ -1,7 +1,9 @@
 //! A wrapper around a SECCOMP context.
 
-use super::{action::Action, attribute::Attribute, raw, syscall::Syscall};
+#[cfg(feature = "notify")]
 use crate::notify::Notifier;
+
+use super::{action::Action, attribute::Attribute, raw, syscall::Syscall};
 use nix::errno::Errno;
 use std::{
     fs::File,

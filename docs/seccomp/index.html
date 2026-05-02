@@ -2,7 +2,7 @@
 <p>This crate allows for the creation and enforcement of SECCOMP filters. It is a wrapper on the C <code>libseccomp</code> library, and as such you will need the library installed at build-time. Though built for Antimony, this crate can be used in other projects.</p>
 <p>For most intents and purposes, you’ll be interacting with this crate via <code>Filter</code>, which handles initialization, configuration, and enforcement of SECCOMP policies. For example:</p>
 
-<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>seccomp::{filter::Filter, action::Action, attribute::Attribute, syscall::Syscall};
+<div class="example-wrap ignore"><a href="#" class="tooltip" title="This example is not tested">ⓘ</a><pre class="rust rust-example-rendered"><code><span class="kw">use </span>seccomp::{filter::Filter, action::Action, attribute::Attribute, syscall::Syscall};
 
 <span class="comment">// Create a new filter that kills the process by default
 </span><span class="kw">let </span><span class="kw-2">mut </span>filter = Filter::new(Action::KillProcess).unwrap();

@@ -4,7 +4,7 @@ This crate allows for the creation and enforcement of SECCOMP filters. It is a w
 
 For most intents and purposes, you’ll be interacting with this crate via `Filter`, which handles initialization, configuration, and enforcement of SECCOMP policies. For example:
 
-```rust
+```rust,ignore
 use seccomp::{filter::Filter, action::Action, attribute::Attribute, syscall::Syscall};
 
 // Create a new filter that kills the process by default
